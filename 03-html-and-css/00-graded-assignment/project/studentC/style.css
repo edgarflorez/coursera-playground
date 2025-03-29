@@ -1,0 +1,75 @@
+body {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  background-color: lightgrey;
+  width: 70%;
+}
+
+nav > ul {
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 2em;
+  background-color: grey;
+  padding: 0.2em;
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.discount {
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  border: 1px solid black;
+  border-radius: 2em;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  background-image: url("/coursera_practice/little_lemon_logos/pasta1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.cards {
+  display: flex;
+  gap: 2em;
+  width: 70%;
+  margin: auto;
+}
+
+.cards > article {
+  padding: 0.8em;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid black;
+  border-radius: 2em;
+  text-align: justify;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+header a {
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+a:hover {
+  color: darkgreen;
+}
+
+section article div {
+  text-align: center;
+  display: grid;
+  border-radius: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section article div:hover {
+  color: black;
+}

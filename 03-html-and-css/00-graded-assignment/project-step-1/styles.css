@@ -1,0 +1,35 @@
+header > img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+
+nav li {
+    display: inline-block;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+}
+
+footer img {
+    width: 150px;
+}
+
+footer div {
+    flex: 1;
+}

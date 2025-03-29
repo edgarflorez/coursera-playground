@@ -1,0 +1,140 @@
+:root {
+  --border-radius: 20px;
+}
+
+body {
+  background-color: #d4cdf4;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #4b3b40;
+  border-radius: var(--border-radius);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+nav li a:hover {
+  text-decoration: overline;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article {
+  flex: 1;
+
+  background-color: #8b85c1;
+  text-shadow: 1px 1px 4px black;
+  color: white;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: var(--border-radius);
+}
+
+article.main {
+  background-image: url("main-article.jpg");
+  background-position: 0px 50%;
+  text-shadow: 1px 1px 4px black;
+  color: white;
+}
+
+article.colors {
+  background-image: url("color-article.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: background-image 1s ease-in-out;
+}
+
+article.colors:hover {
+  background-image: url("color-article1.jpg");
+}
+
+article.book {
+  background-image: url("book-now-article.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: background-image 1s ease-in-out, transform 2s;
+}
+
+article.book:hover {
+  transform: rotateY(360deg);
+}
+
+article p {
+  background-color: #4b3b40;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  color: white;
+  line-height: 1.5;
+}
+
+section > article:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  display: flex;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer div > img {
+  height: 30px;
+}
+
+#copyright {
+  text-align: end;
+}
