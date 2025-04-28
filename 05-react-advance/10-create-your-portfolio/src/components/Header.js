@@ -33,6 +33,10 @@ const socials = [
 ];
 
 const Header = () => {
+  const headerBoxRef = useRef(null);
+
+  const previousScrollY = useRef(0);
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -46,11 +50,29 @@ const Header = () => {
 
   const socialMediaLinks = socials.map((social) => {
     return (
-      <a href={social.url} key={social.url}>
+      <a href={social.url} key={social.url} target="_blank">
         <FontAwesomeIcon icon={social.icon} size="2x" />
       </a>
     );
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const newScrollY = window.scrollY;
+      if (newScrollY > previousScrollY.current) {
+        headerBoxRef.current.style.transform = "translateY(-200px)";
+      } else {
+        headerBoxRef.current.style.transform = "translateY(0)";
+      }
+      previousScrollY.current = newScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Box
@@ -63,6 +85,8 @@ const Header = () => {
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
+      zIndex={1}
+      ref={headerBoxRef}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -78,6 +102,20 @@ const Header = () => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
+              <a
+                key="projects-link"
+                href="/#projects"
+                onClick={handleClick("projects")}
+              >
+                Projects
+              </a>
+              <a
+                key="contact-me-link"
+                href="/#contact-me"
+                onClick={handleClick("contactme")}
+              >
+                Contact Me
+              </a>
             </HStack>
           </nav>
         </HStack>
