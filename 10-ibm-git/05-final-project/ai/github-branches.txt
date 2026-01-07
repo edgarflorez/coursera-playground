@@ -1,0 +1,4 @@
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git branch -vv
+* bug-fix-revert 1754f3e Revert "Update readme file typo on copyright year"
+  bug-fix-typo   7e4c599 Update readme file typo on copyright year
+  main           7e4c599 [origin/main: ahead 1] Update readme file typo on copyright year

@@ -1,0 +1,249 @@
+# Tasks
+
+# Task 1
+https://github.com/edgarflorez/github-final-project/blob/main/README.md
+
+# Task 2
+https://github.com/edgarflorez/github-final-project/blob/main/LICENSE
+
+# Task 3
+https://github.com/edgarflorez/github-final-project/blob/main/CODE_OF_CONDUCT.md
+
+# Task 4
+https://github.com/edgarflorez/github-final-project/blob/main/CONTRIBUTING.md
+
+# Task 5
+https://github.com/edgarflorez/github-final-project/blob/main/simple-interest.sh
+
+
+# CLI
+
+## Task 1
+curl -s https://github.com/edgarflorez/mcino-Introduction-to-Git-and-GitHub | jq -r '.parent.clone_url'
+curl -s https://api.github.com/repos/edgarflorez/mcino-Introduction-to-Git-and-GitHub | jq -r '.parent.clone_url'
+
+## Task 3
+https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pull/4138
+curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/<Pull-Request-ID> | jq -r '.head.repo.clone_url'
+curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/4138 | jq -r '.head.repo.clone_url'
+
+## Option 1 AI graded
+1. https://github.com/edgarflorez/github-final-project/blob/main/README.md
+2. https://github.com/edgarflorez/github-final-project/blob/main/LICENSE
+3. https://github.com/edgarflorez/github-final-project/blob/main/CODE_OF_CONDUCT.md
+4. https://github.com/edgarflorez/github-final-project/blob/main/CONTRIBUTING.md
+5. https://github.com/edgarflorez/github-final-project/blob/main/simple-interest.sh
+
+
+# Full log
+
+theia@theia-edgarfmail:/home/project$ curl -s https://github.com/edgarflorez/mcino-Introduction-to-Git-and-GitHub | jq -r '.parent.clone_url'
+parse error: Invalid numeric literal at line 8, column 10
+theia@theia-edgarfmail:/home/project$ curl -s https://api.github.com/repos/edgarflorez/mcino-Introduction-to-Git-and-GitHub | jq -r '.parent.clone_url'
+https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub.git
+theia@theia-edgarfmail:/home/project$ git clone 
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+theia@theia-edgarfmail:/home/project$ git clone https://github.com/edgarflorez/mcino-Introduction-to-Git-and-GitHub.git
+Cloning into 'mcino-Introduction-to-Git-and-GitHub'...
+remote: Enumerating objects: 35, done.
+remote: Total 35 (delta 0), reused 0 (delta 0), pack-reused 35 (from 1)
+Receiving objects: 100% (35/35), 17.05 KiB | 17.05 MiB/s, done.
+Resolving deltas: 100% (8/8), done.
+theia@theia-edgarfmail:/home/project$ ls
+mcino-Introduction-to-Git-and-GitHub
+theia@theia-edgarfmail:/home/project$ cd mcino-Introduction-to-Git-and-GitHub/
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git branch -b bug-fix-typo 
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git checkout -b bug-fix-typo
+Switched to a new branch 'bug-fix-typo'
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git status
+On branch bug-fix-typo
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git add .
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git commit -m "Update typo on the readme file"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'theia@theia-edgarfmail.(none)')
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git log 
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git config --global user.email "edgarfmail@gmail.com"
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git config --global user.name "Edgar Florez:
+> ^C
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git config --global user.name "Edgar Florez"
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git ci -m "Update readme file typo on copyright year" 
+git: 'ci' is not a git command. See 'git --help'.
+
+The most similar commands are
+        am
+        commit
+        config
+        diff
+        fsck
+        gc
+        init
+        mv
+        rm
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git commit -m "Update readme fi
+le typo on copyright year"
+[bug-fix-typo 7e4c599] Update readme file typo on copyright year
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git st
+git: 'st' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        reset
+        stage
+        stash
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git status
+On branch bug-fix-typo
+nothing to commit, working tree clean
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git push origin bug-fix-typo
+Username for 'https://github.com': edgarfmail@gmail.com
+Password for 'https://edgarfmail%40gmail.com@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'bug-fix-typo' on GitHub by visiting:
+remote:      https://github.com/edgarflorez/mcino-Introduction-to-Git-and-GitHub/pull/new/bug-fix-typo
+remote: 
+To https://github.com/edgarflorez/mcino-Introduction-to-Git-and-GitHub.git
+ * [new branch]      bug-fix-typo -> bug-fix-typo
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git merge origin bug-fix-typo
+Updating ad95b0a..7e4c599
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git log 
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git checkout -b bug-fix-revert
+Switched to a new branch 'bug-fix-revert'
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git status 
+On branch bug-fix-revert
+nothing to commit, working tree clean
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git log 
+commit 7e4c5990fb949130032ca2a6ab9e3db01581de0c (HEAD -> bug-fix-revert, origin/bug-fix-typo, main, bug-fi
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git revert HEAD 
+[bug-fix-revert 1754f3e] Revert "Update readme file typo on copyright year"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git log 
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git push origin bug-fix-revert
+Username for 'https://github.com': edgarfmail@gmail.com
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ git branch -vv
+* bug-fix-revert 1754f3e Revert "Update readme file typo on copyright year"
+  bug-fix-typo   7e4c599 Update readme file typo on copyright year
+  main           7e4c599 [origin/main: ahead 1] Update readme file typo on copyright year
+theia@theia-edgarfmail:/home/project/mcino-Introduction-to-Git-and-GitHub$ 
